@@ -1,0 +1,64 @@
+.fcontainer {
+
+    padding: 2rem;
+    background: rgb(0, 0, 0);
+    color: white;
+    z-index: 2;
+}
+
+.kolom_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.kolomjdul{
+    padding: 5rem;
+}
+.kolomjdul:hover{
+    color: gray;
+    cursor: pointer;
+}
+.kolom {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+}
+.kolom :hover{
+    color: gray;
+    cursor: pointer;
+}
+.isi {
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.isi_ctr {
+    background-color: rgba(6, 5, 7, 0.822); 
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+.jeda{
+    padding: 2rem;
+    font-weight: 700;
+
+}
+
+.uy{
+    font-family: 'Courier New', Courier, monospace;
+}
+.uy:hover{
+    transform: scaleX(2);
+    transition-duration: 2s;
+}
+.kopi{
+    text-align: center;
+}

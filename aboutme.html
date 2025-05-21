@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radix - About Me</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="lol.css" />
+  <style>
+    @keyframes scaleUp {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .scroll-fade-in {
+      animation: scaleUp 0.8s ease-out forwards;
+    }
+
+    .invisible {
+      opacity: 0;
+    }
+
+    body {
+      background-color: rgba(6, 5, 7, 0.822);
+    }
+
+    #tsparticles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body class="text-white">
+  <!-- Particles Container -->
+  <div id="tsparticles"></div>
+
+  <!-- Navbar -->
+  <header id="navbar" class="sticky top-0 z-50">
+    <nav class="bg-black shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex-shrink-0">
+            <h1 class="text-xl font-bold text-white">Radix</h1>
+          </div>
+          <div class="hidden sm:flex space-x-6 items-center">
+            <a href="jw.html"
+              class="text-white text-sm font-medium px-3 py-2 rounded-md bg-gray-900 hover:bg-gray-700">Home</a>
+            <a href="aboutme.html"
+              class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-700">About me</a>
+            <a href="portofolio.html"
+              class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-700">Portfolio</a>
+            <a href="contact.html"
+              class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-700">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="p-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">About Me</h1>
+    <section class="grid md:grid-cols-3 gap-8 px-6 pb-10">
+      <!-- Description -->
+      <div class="text-lg leading-relaxed">
+        <h2 class="font-bold text-4xl">My name is <span class="text-yellow-400">Radix</span>.</h2>
+        <p class="mt-4">I am 17 years old and currently in the first grade of vocational high school with one year of
+          experience. I study at Tengaran Vocational School. I have hard skills in public speaking and can speak
+          English, Japanese, and Arabic.</p>
+        <div class="mt-4">
+          <p>Do you want to see my projects?</p>
+          <a href="portofolio.html">
+            <button class=" uy border border-white text-white px-6 py-2 m-4 ">
+              Learn More
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="flex justify-center items-center">
+        <img src="1000032901-removebg-preview.png" alt="Radix Profile"
+          class="w-40 h-40 object-cover rounded-full border-4 border-yellow-400 shadow-lg" />
+      </div>
+
+      <!-- Skills and Chart -->
+      <div>
+        <h2 class="text-2xl font-semibold mb-2">My Skills</h2>
+        <canvas id="kdaRadarChart"
+          class="w-full h-64 invisible transition-transform duration-300 hover:scale-105"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="fcontainer">
+    <div class="kolom_grid">
+      <div class="kolomjdul">
+        <h1>RADIX</h1>
+      </div>
+      <div class="kolom">
+        <h1>RADIX</h1>
+        <p>i am a programmer student</p>
+      </div>
+      <div class="kolom">
+        <h1>You can contact me at social media</h1>
+        <p>Radix Rasyad Alquds</p>
+       <div class="flex space-x-4 m-7 ">
+          <!-- Instagram -->
+          <a href="#"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram"
+              class="w-6 h-6 object-contain">
+          </a>
+
+          <!-- Facebook -->
+          <a href="#"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="Vector-Facebook-Logo-Black-And-White-PNG-Background-Image.png" alt="Facebook"
+              class="w-6 h-6 object-contain">
+          </a>
+
+          <!-- GitHub -->
+          <a href="#"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="Github-Logo-Transparent-Background-PNG.png" alt="GitHub" class="w-6 h-6 object-contain">
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="#"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="whatsapp-logo-black-and-white-free-png.webp" alt="WhatsApp" class="w-6 h-6 object-contain">
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+    <div class="kopi">
+      <h1>&copy;Radix Rasyad Al-Quds</h1>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.remove('opacity-0', '-translate-y-5');
+      navbar.classList.add('opacity-100', 'translate-y-0');
+    });
+
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: false },
+      background: { color: { value: "transparent" } },
+      particles: {
+        number: { value: 60, density: { enable: true, area: 800 } },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 6, random: true },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          outModes: "bounce"
+        },
+        links: {
+          enable: true,
+          distance: 100,
+          color: "#ffffff",
+          opacity: 0.2,
+          width: 1
+        }
+      },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          resize: true
+        },
+        modes: { repulse: { distance: 100, duration: 0.4 } }
+      }
+    });
+
+    const ctx = document.getElementById('kdaRadarChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'radar',
+      data: {
+        labels: ['HTML (90%)', 'CSS (80%)', 'JavaScript (65%)', 'Python (12%)', 'PHP (0%)'],
+        datasets: [{
+          label: 'KDA Skills',
+          data: [90, 80, 65, 12, 0],
+          backgroundColor: 'rgba(255, 206, 86, 0.3)',
+          borderColor: 'rgba(255, 206, 86, 1)',
+          pointBackgroundColor: 'rgba(255, 206, 86, 1)',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        scales: {
+          r: {
+            angleLines: { color: '#555' },
+            grid: { color: '#444' },
+            pointLabels: { color: '#fff', font: { size: 14 } },
+            ticks: {
+              color: '#ccc',
+              backdropColor: 'transparent',
+              stepSize: 20,
+              beginAtZero: true,
+              max: 100
+            }
+          }
+        },
+        plugins: { legend: { display: false } },
+        hover: { mode: 'nearest', intersect: true }
+      }
+    });
+
+    const canvas = document.getElementById('kdaRadarChart');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          canvas.classList.remove('invisible');
+          canvas.classList.add('scroll-fade-in');
+        }
+      });
+    }, { threshold: 0.1 });
+    observer.observe(canvas);
+  </script>
+</body>
+
+</html>

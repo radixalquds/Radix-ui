@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="lol.css">
+  <title>Radix</title>
+  <style>
+    .typing::after {
+      content: "|";
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%,
+      100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .fade-out {
+      animation: fadeOut 0.8s ease forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="fixed inset-0 flex items-center justify-center bg-black text-white z-50 transition-opacity duration-500">
+    <h1 id="loadingText" class="text-3xl md:text-5xl font-mono tracking-wider typing"></h1>
+  </div>
+
+  <header id="navbar" class="sticky top-0 z-50">
+    <nav class="bg-black shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex-shrink-0">
+            <h1 class="text-xl font-bold text-white">Radix</h1>
+          </div>
+          <div class="hidden sm:flex space-x-6 items-center">
+            <a href="#" class="text-white text-sm font-medium px-3 py-2 rounded-md bg-gray-900 transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white" aria-current="page">Home</a>
+            <a href="aboutme.html" class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white">About me</a>
+            <a href="portofolio.html" class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white">Portfolio</a>
+            <a href="contact.html" class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="overflow-hidden background">
+    <div class="w-full h-full transform scale-[1.2] w-full m-0">
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.95/build/spline-viewer.js"></script>
+      <spline-viewer url="https://prod.spline.design/iEbkZ48VRqvD1adB/scene.splinecode"></spline-viewer>
+    </div>
+  </main>
+
+  <section>
+    <div class="isi_ctr">
+      <div class="isi">
+        <h1>HELLO MY NAME IS <span class="text-yellow-400">RADIX</span></h1>
+      </div>
+      <p>I am a student, this website will help you get to know me better.</p>
+      <a href="aboutme.html">
+        <button class="border border-white text-white px-6 py-2 m-4 transition-transform duration-300 hover:scale-105">
+          Learn More
+        </button>
+      </a>
+    </div>
+  </section>
+
+  <footer class="fcontainer">
+    <div class="kolom_grid">
+      <div class="kolomjdul">
+        <h1>RADIX</h1>
+      </div>
+      <div class="kolom">
+        <h1>RADIX</h1>
+        <p>i am a programmer student</p>
+      </div>
+      <div class="kolom">
+        <h1>You can contact me at social media</h1>
+        <p>Radix Rasyad Alquds</p>
+        <div class="flex space-x-4 m-7 ">
+          <!-- Social Media Links -->
+          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram" class="w-6 h-6 object-contain">
+          </a>
+          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="Vector-Facebook-Logo-Black-And-White-PNG-Background-Image.png" alt="Facebook" class="w-6 h-6 object-contain">
+          </a>
+          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="Github-Logo-Transparent-Background-PNG.png" alt="GitHub" class="w-6 h-6 object-contain">
+          </a>
+          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="whatsapp-logo-black-and-white-free-png.webp" alt="WhatsApp" class="w-6 h-6 object-contain">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="kopi">
+      <h1>&copy;Radix Rasyad Al-Quds</h1>
+    </div>
+  </footer>
+
+  <script>
+    const finalText = "HELLO MY NAME IS RADIX";
+    const loadingText = document.getElementById("loadingText");
+    const loadingScreen = document.getElementById("loadingScreen");
+    const mainContent = document.getElementById("mainContent");
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    let scrambleDuration = 1200; // ms
+    let scrambleIntervalMs = 30;
+
+    function scrambleEffect(callback) {
+      let start = Date.now();
+
+      const scrambleInterval = setInterval(() => {
+        let elapsed = Date.now() - start;
+
+        if (elapsed >= scrambleDuration) {
+          clearInterval(scrambleInterval);
+          callback();
+          return;
+        }
+
+        const scrambled = finalText.split("").map(c => {
+          if (c === " ") return " ";
+          return chars[Math.floor(Math.random() * chars.length)];
+        }).join("");
+
+        loadingText.textContent = scrambled;
+      }, scrambleIntervalMs);
+    }
+
+    function typeEffect(text, index = 0) {
+      if (index <= text.length) {
+        loadingText.textContent = text.slice(0, index);
+        setTimeout(() => typeEffect(text, index + 1), 80);
+      } else {
+        // Smooth fade out
+        setTimeout(() => {
+          loadingScreen.classList.add("fade-out");
+          setTimeout(() => {
+            loadingScreen.style.display = "none";
+            mainContent.classList.remove("hidden");
+          }, 800); // match fadeOut animation duration
+        }, 500);
+      }
+    }
+
+    // Start sequence
+    scrambleEffect(() => typeEffect(finalText));
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.remove('opacity-0', '-translate-y-5');
+      navbar.classList.add('opacity-100', 'translate-y-0');
+    });
+  </script>
+
+</body>
+
+</html>

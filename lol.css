@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: rgba(6, 5, 7, 0.822);
+}
+
+.fcontainer {
+
+    padding: 2rem;
+    background: rgb(0, 0, 0);
+    color: white;
+    z-index: 2;
+}
+
+.kolom_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.kolomjdul {
+    padding: 5rem;
+}
+
+.kolomjdul:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.kolom {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.kolom :hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.isi {
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.isi_ctr {
+    background-color: rgba(6, 5, 7, 0.822);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+.jeda {
+    padding: 2rem;
+    font-weight: 700;
+
+}
+
+.cont_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.yapp {
+    color: white;
+    padding: 5rem;
+}
+
+.isicon {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: white;
+    border-radius: 3rem;
+}
+
+.mainan {
+    text-align: center;
+    padding: 3rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.kopi {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 3rem;
+    background: #aaafaf;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    color: #000000;
+}
+
+.contact-form button {
+    background-color: #fff6f6;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #fff306;
+}
+
+.uy {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.uy:hover {
+    transform: scaleX(2);
+    transition-duration: 2s;
+}
