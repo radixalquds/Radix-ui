@@ -1,8 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-
     background-color: rgba(6, 5, 7, 0.822);
+}
+
+.logo {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    margin: 2rem auto;
 }
 
 .fcontainer {
@@ -15,26 +21,38 @@ body {
 
 .kolom_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
-.kolomjdul {
-    padding: 5rem;
+.kolomjdul h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 2rem;
 }
 
-.kolomjdul:hover {
-    color: gray;
-    cursor: pointer;
-}
-
-.kolom {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 300;
+.kolom h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff;
     text-align: center;
 }
 
-.kolom :hover {
-    color: gray;
+.kolom p {
+    margin: 0.5rem 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.kolom p:hover {
+    color: #444;
+    cursor: pointer;
+}
+.kolom h1:hover {
+    color: #444;
     cursor: pointer;
 }
 
@@ -45,11 +63,19 @@ body {
 
 }
 
+.isi img {
+    width: 3rem;
+    margin: 2rem;
+    display: flex;
+}
+
 .isi_ctr {
     background-color: rgba(6, 5, 7, 0.822);
     color: white;
     text-align: center;
     padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 * {
@@ -66,7 +92,7 @@ body {
 
 .cont_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .yapp {
@@ -145,4 +171,32 @@ body {
 .uy:hover {
     transform: scaleX(2);
     transition-duration: 1.2s;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.image-row img {
+    width: 3rem;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+    transform: scale(1.1);
+}
+
+.isilabel {
+    color: white;
+    text-align: center;
+}
+
+.isilabel:hover {
+    color: yellow;
+    cursor: pointer;
 }

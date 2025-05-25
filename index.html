@@ -14,10 +14,12 @@
     }
 
     @keyframes blink {
+
       0%,
       100% {
         opacity: 1;
       }
+
       50% {
         opacity: 0;
       }
@@ -39,27 +41,34 @@
 <body class="bg-white text-black">
 
   <!-- Loading Screen -->
-  <div id="loadingScreen" class="fixed inset-0 flex items-center justify-center bg-black text-white z-50 transition-opacity duration-500">
+  <div id="loadingScreen"
+    class="fixed inset-0 flex items-center justify-center bg-black text-white z-50 transition-opacity duration-500">
     <h1 id="loadingText" class="text-3xl md:text-5xl font-mono tracking-wider typing"></h1>
   </div>
-
-  <header id="navbar" class="sticky top-0 z-50">
-    <nav class="bg-black shadow-md">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16 items-center">
-          <div class="flex-shrink-0">
-            <h1 class="text-xl font-bold text-white">Radix</h1>
-          </div>
-          <div class="hidden sm:flex space-x-6 items-center">
-            <a href="#" class="text-white text-sm font-medium px-3 py-2 rounded-md bg-gray-900 transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white" aria-current="page">Home</a>
-            <a href="aboutme.html" class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white">About me</a>
-            <a href="portofolio.html" class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white">Portfolio</a>
-            <a href="contact.html" class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md transition duration-300 ease-in-out hover:bg-gray-700 hover:text-white">Contact</a>
-          </div>
+ <header id="navbar" class="sticky top-0 z-50">
+  <nav class="bg-black shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <div class="flex-shrink-0 flex items-center space-x-2">
+          <img src="image-removebg-preview.png" alt="" class="h-6 w-auto">
+          <h1 class="text-xl font-bold text-white">Radix</h1>
+        </div>
+        <div class="hidden sm:flex space-x-6 items-center">
+          <a href="index.html"
+            class="text-white text-sm font-medium px-3 py-2 rounded-md bg-gray-900 hover:bg-gray-700">Home</a>
+          <a href="aboutme.html"
+            class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-700">About me</a>
+          <a href="portofolio.html"
+            class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-700">Portfolio</a>
+          <a href="contact.html"
+            class="text-gray-300 text-sm font-medium px-3 py-2 rounded-md hover:bg-gray-700">Contact</a>
         </div>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
+
+
 
   <main class="overflow-hidden background">
     <div class="w-full h-full transform scale-[1.2] w-full m-0">
@@ -79,7 +88,27 @@
           Learn More
         </button>
       </a>
-    </div>
+      <div class="isi">
+        <p>I am a <span class=" text-yellow-400"> web Developer </span></p>
+        <div class="image-row">
+          <div class="isilabel">
+            <img src="php.jpg" alt="">
+            <p>PHP</p>
+          </div>
+          <div class="isilabel">
+            <img src="preview (1).avif" alt="">
+            <p>CSS</p>
+          </div>
+          <div class="isilabel">
+            <img src="javascript-logo-png_seeklogo-480547.png" alt="">
+            <p>JavaScript</p>
+          </div>
+          <div class="isilabel">
+            <img src="preview.avif" alt="">
+            <p>HTML</p>
+          </div>
+        </div>
+      </div>
   </section>
 
   <footer class="fcontainer">
@@ -90,23 +119,32 @@
       <div class="kolom">
         <h1>RADIX</h1>
         <p>i am a programmer student</p>
+        <p>i am a Web Developer</p>
+        <p>HTML , CSS , JavaScript , PHP user</p>
+        <p>Let's we're making a website </p>
       </div>
       <div class="kolom">
         <h1>You can contact me at social media</h1>
         <p>Radix Rasyad Alquds</p>
         <div class="flex space-x-4 m-7 ">
           <!-- Social Media Links -->
-          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
-            <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram" class="w-6 h-6 object-contain">
+          <a href="https://www.instagram.com/shinrax_1/"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram"
+              class="w-6 h-6 object-contain">
           </a>
-          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
-            <img src="Vector-Facebook-Logo-Black-And-White-PNG-Background-Image.png" alt="Facebook" class="w-6 h-6 object-contain">
+          <a href="https://www.facebook.com/profile.php?id=100008887519441"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+            <img src="Vector-Facebook-Logo-Black-And-White-PNG-Background-Image.png" alt="Facebook"
+              class="w-6 h-6 object-contain">
           </a>
-          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
+          <a href="https://github.com/radixalquds"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
             <img src="Github-Logo-Transparent-Background-PNG.png" alt="GitHub" class="w-6 h-6 object-contain">
           </a>
-          <a href="#" class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-14 h-14 flex items-center justify-center transition-colors duration-300">
-            <img src="whatsapp-logo-black-and-white-free-png.webp" alt="WhatsApp" class="w-6 h-6 object-contain">
+          <a href="https://www.tiktok.com/search?q=avalonz6&t=1748137957682"
+            class="bg-gray-500 hover:bg-white text-white hover:text-gray-800 rounded-full w-16 h-16 flex items-center justify-center transition-colors duration-300">
+            <img src="pnghq.com-black-tiktok-logo-with-pn-1.png" alt="WhatsApp" class="w-6 h-6 object-contain">
           </a>
         </div>
       </div>
